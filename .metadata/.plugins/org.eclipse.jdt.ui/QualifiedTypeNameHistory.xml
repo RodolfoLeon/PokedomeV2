@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
+<fullyQualifiedTypeName name="java.beans.Transient"/>
+<fullyQualifiedTypeName name="javax.persistence.Transient"/>
+<fullyQualifiedTypeName name="com.lab206.pokedomev2.models.Role"/>
+<fullyQualifiedTypeName name="javax.validation.Validator"/>
+<fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
+<fullyQualifiedTypeName name="com.lab206.pokedomev2.models.User"/>
+<fullyQualifiedTypeName name="java.security.Principal"/>
+</qualifiedTypeNameHistroy>

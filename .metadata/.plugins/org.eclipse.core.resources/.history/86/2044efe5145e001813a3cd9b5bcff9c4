@@ -1,0 +1,45 @@
+package com.lab206.pokedomev2.controllers;
+
+@Controller
+public class UsersController {
+	
+	private final UserService userService;
+	private final UserValidator userValidator;
+	public UsersController(UserService userService, UserValidator userValidator) {
+		this.userService = userService;
+		this.userValidator = userValidator;
+	}
+	
+	@RequestMapping("/login")
+    public String login_reg(@ModelAttribute("new_user") User user, @RequestParam(value="error", required=false) String error, @RequestParam(value="logout", required=false) String logout, Model m) {
+        if (error != null) {
+        	m.addAttribute("error", "Invalid Email/Password Combination");
+        } else if (logout != null) {
+        	m.addAttribute("logout", "Logged out successfully!");
+        }
+        
+		m.addAttribute("states", states);
+		return "index.jsp";
+    }
+	
+	@PostMapping("/registration")
+	public String register(@Valid @ModelAttribute("new_user") User user, BindingResult result, Model model, HttpSession session) {
+		System.out.println("here");
+		userValidator.validate(user, result);
+		if (result.hasErrors()) {
+			model.addAttribute("states", states);
+			return "index.jsp";
+		}else {
+			userService.saveWithUserRole(user);
+	        return "redirect:/login";
+		}
+	}
+	
+	@RequestMapping(value = {"/events"})
+    public String home(Principal principal, Model model) {
+        String username = principal.getName();
+        User u = userService.findByEmail(username);
+        model.addAttribute("currentUser", u);
+        return "dashboard.jsp";
+    }
+}

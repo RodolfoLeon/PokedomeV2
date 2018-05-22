@@ -50,7 +50,7 @@ public class User {
         this.updatedAt = new Date();
     }
     
-    //Security
+    //Roles
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "user_roles", 

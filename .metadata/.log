@@ -145,3 +145,160 @@ org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://do
 
 !ENTRY org.eclipse.jface.text 2 0 2018-05-22 13:25:59.151
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 13:52:03.921
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/sts4-language-servers.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 13:52:35.948
+!MESSAGE No repository found at http://www.genuitec.com/updates/webclipse/oxygen/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-22 13:52:37.915
+!MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/content.jar
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 13:52:41.294
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7.
+!SESSION 2018-05-22 16:14:18.696 -----------------------------------------------
+eclipse.buildId=3.9.4.201804120921-RELEASE-e47
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -data C:\Users\rodoleon\Desktop\Project -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.ui 2 0 2018-05-22 16:14:26.900
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-05-22 16:14:26.900
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-05-22 16:14:29.522
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-05-22 16:14:29.853
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2018-05-22 16:14:30.142
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-22 16:14:30.142
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@196c290,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e96b3c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-22 16:14:39.783
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2018-05-22 16:14:41.127
+!MESSAGE Failed to access metadata repository under http://downloads.genuitec.com/downloads/products/webclipse/updates/wc2017ci12
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://downloads.genuitec.com/downloads/products/webclipse/updates/wc2017ci12.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:246)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 16:14:41.130
+!MESSAGE No repository found at http://downloads.genuitec.com/downloads/products/webclipse/updates/wc2017ci12.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-22 16:21:32.065
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-22 16:21:32.065
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 16:27:25.130
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/sts4-language-servers.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 16:27:36.207
+!MESSAGE No repository found at http://www.genuitec.com/updates/webclipse/oxygen/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-22 16:27:37.859
+!MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/content.jar
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 16:27:41.292
+!MESSAGE No repository found at http://download.springsource.com/release/TOOLS/update/e4.7.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-22 17:18:24.262
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-22 17:18:24.263
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-05-22 17:22:46.928 -----------------------------------------------
+eclipse.buildId=3.9.4.201804120921-RELEASE-e47
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -data C:\Users\rodoleon\Desktop\Project -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.ui 2 0 2018-05-22 17:22:58.674
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-05-22 17:22:58.674
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-05-22 17:23:01.550
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2018-05-22 17:23:03.650
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-22 17:23:03.650
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c58f64,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1640109,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-22 17:23:20.918
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.genuitec.eclipse.webclipse.evergreen 4 0 2018-05-22 17:23:21.235
+!MESSAGE Failed to access metadata repository under http://downloads.genuitec.com/downloads/products/webclipse/updates/wc2017ci12
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://downloads.genuitec.com/downloads/products/webclipse/updates/wc2017ci12.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at com.genuitec.eclipse.webclipse.evergreen.internal.EvergreenUpdateProcess.run(EvergreenUpdateProcess.java:246)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-22 17:23:21.237
+!MESSAGE No repository found at http://downloads.genuitec.com/downloads/products/webclipse/updates/wc2017ci12.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-22 17:26:32.643
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-22 17:26:32.645
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
