@@ -1,0 +1,44 @@
+package com.lab206.pokedomev2.models;
+
+@Entity
+@Table(name="users")
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+    
+    @NotEmpty
+    private String firstName;
+    
+    @NotEmpty
+    @Size(min=6)
+    private String password;
+    
+    @Transient
+    private String passwordConfirmation;
+    
+    @Column(updatable=false)
+    private Date createdAt;
+    private Date updatedAt;
+    
+	@PrePersist
+    protected void onCreate(){
+        this.createdAt = new Date();
+    }
+    @PreUpdate
+    protected void onUpdate(){
+        this.updatedAt = new Date();
+    }
+    
+    //Security
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "user_roles", 
+        joinColumns = @JoinColumn(name = "user_id"), 
+        inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role> roles;
+    
+    public User() {
+    	
+    }
