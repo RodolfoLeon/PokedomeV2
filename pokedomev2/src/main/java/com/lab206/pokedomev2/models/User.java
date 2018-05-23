@@ -27,11 +27,10 @@ public class User {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     
-    @NotEmpty
+    @NotEmpty(message="The username field cannot be empty")
     private String username;
     
-    @NotEmpty
-    @Size(min=6)
+    @Size(min=6, message="The password must be at least 6 characters")
     private String password;
     
     @Transient

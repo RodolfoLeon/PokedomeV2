@@ -2,6 +2,8 @@ package com.lab206.pokedomev2.controllers;
 
 import java.security.Principal;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -34,26 +36,35 @@ public class UserControllers {
         } else if (logout != null) {
         	m.addAttribute("logout", "Logged out successfully!");
         }
-		return "index.jsp";
+		return "views/index.jsp";
     }
 	
 	@PostMapping("/registration")
-	public String register(@Valid @ModelAttribute("new_user") User user, BindingResult result, Model model, HttpSession session) {
+	public String register(@Valid @ModelAttribute("new_user") User user, BindingResult result, Model model, HttpSession session, HttpServletRequest request) {
 		System.out.println("here");
 		userValidator.validate(user, result);
 		if (result.hasErrors()) {
-			return "index.jsp";
-		}else {
-			userService.saveWithUserRole(user);
-	        return "redirect:/login";
+			return "views/index.jsp";
 		}
+		
+		userService.saveWithUserRole(user);
+		
+		try {
+			request.login(user.getUsername(), user.getPasswordConfirmation());
+		} catch (ServletException e) {
+			System.out.println("IT DID NOT WORK :C");
+		}	
+	    
+		return "redirect:/main";
 	}
 	
-	@RequestMapping(value = {"/events"})
+	@RequestMapping("/main")
     public String home(Principal principal, Model model) {
-        String username = principal.getName();
+        
+		String username = principal.getName();
         User u = userService.findByUsername(username);
         model.addAttribute("currentUser", u);
-        return "dashboard.jsp";
+        
+        return "views/main.jsp";
     }
 }

@@ -23,3 +23,4 @@ signUp.onclick = function(e){
   panelBoxes[1].classList.add('active');
   menu.classList.add('second-box');
 }
+

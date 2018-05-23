@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+ul {
+    list-style-type: none;
+}
+
+#content {
+    display: inline-block;
+}
+
+#profile {
+    display: none;
+}
+
+#pokedex {
+    display: none;
+}
+
+#poketeams {
+    display: none;
+}
+
+#pokebarn {
+    display: none;
+}

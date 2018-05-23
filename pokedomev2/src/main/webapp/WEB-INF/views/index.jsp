@@ -7,7 +7,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<style type="text/css">
-        <%@include file="../css/style.css" %>
+        <%@include file="../css/login.css" %>
 	</style>
 	<title></title>
 </head>
@@ -33,18 +33,18 @@
 					</form>
 				</div>
 				<div class="panel__box" id="signUpBox">
-					<form:form action="/register" method="post" modelAttribute="user">
+					<form:form action="/registration" method="post" modelAttribute="new_user">
 						<form:label path="username">Username
+						<form:errors path = "username" class="red"/>
 						<form:input path = "username"/>
-						<form:errors path = "username"/>
 						</form:label>
 						<form:label path="password">Password
-						<form:input path = "password"/>
-						<form:errors path = "password"/>
+						<form:errors path = "password" class="red"/>
+						<form:password path = "password"/>
 						</form:label>
 						<form:label path="passwordConfirmation">Confirm Password
-						<form:input path = "passwordConfirmation"/>
-						<form:errors path = "passwordConfirmation"/>
+						<form:errors path = "passwordConfirmation" class="red"/>
+						<form:password path = "passwordConfirmation"/>
 						</form:label>
 						<input type="submit" value="Register">
 					</form:form>
@@ -53,5 +53,5 @@
 		</div>
 	</div>
 </body>
-<script src="js/script.js"></script>
+<script src="js/login.js"></script>
 </html>
