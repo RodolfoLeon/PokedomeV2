@@ -58,7 +58,7 @@ public class UserControllers {
 		return "redirect:/main";
 	}
 	
-	@RequestMapping("/main")
+	@RequestMapping(value = {"/", "/main"})
     public String home(Principal principal, Model model) {
         
 		String username = principal.getName();

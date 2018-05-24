@@ -16,13 +16,15 @@
             </div>
             <div id="right_pane">
                 <h4>Current Team</h4>
-                <c:forEach items="${user.team}" var="pokemon">
-                    <div class="card" style="width: 10rem; height: 14rem">
-                        <img class="card-img-top" src="" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">${pokemon.name}</h5>
-                        </div>
-                    </div>
+                <c:forEach items="${user.teams}" var="team">
+                	<c:forEach items="${team}" var="pokemon">
+	                    <div class="card" style="width: 10rem; height: 14rem">
+	                        <img class="card-img-top" src="" alt="Card image cap">
+	                        <div class="card-body">
+	                            <h5 class="card-title">${pokemon.name}</h5>
+	                        </div>
+	                    </div>
+                	</c:forEach>
                 </c:forEach>
             </div>
         </div>
