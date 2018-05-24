@@ -30,6 +30,8 @@ public class Pokemon {
 		
 	private Double pk_height;
 	
+	private Double pk_weight;
+	
 	@ManyToMany (fetch = FetchType.LAZY) 		
 	@JoinTable (
     		name = "team_members",
@@ -37,6 +39,15 @@ public class Pokemon {
     		inverseJoinColumns = @JoinColumn (name = "team_id")
     )
     private List<Team> teams;
+	
+	
+	@ManyToMany (fetch = FetchType.LAZY) 		
+	@JoinTable (
+    		name = "pokemon_types",
+    		joinColumns = @JoinColumn (name = "pokemon_id"),
+    		inverseJoinColumns = @JoinColumn (name = "poketype_id")
+    )
+    private List<Pokemon> pokemons;
 	
 	
     @Column(updatable=false)
@@ -88,6 +99,18 @@ public class Pokemon {
 	}
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	public Double getPk_weight() {
+		return pk_weight;
+	}
+	public void setPk_weight(Double pk_weight) {
+		this.pk_weight = pk_weight;
+	}
+	public List<Pokemon> getPokemons() {
+		return pokemons;
+	}
+	public void setPokemons(List<Pokemon> pokemons) {
+		this.pokemons = pokemons;
 	}    
 	
     
