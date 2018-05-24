@@ -27,7 +27,8 @@ li {
   body {
     background-image: url('img/login.gif');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    
     /* background-blend-mode: luminosity; */
     background-position: center 0;
     background-color: #3A4366;

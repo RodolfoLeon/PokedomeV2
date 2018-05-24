@@ -10,23 +10,34 @@ $(document).ready (function () {
         $('#pokedex').hide();
         $('#poketeams').hide();
         $('#pokebarn').hide();
+        $('#battle').hide();
     });
     $('.pokedex').on ('click', function () {
         $('#profile').hide();
         $('#pokedex').show();
         $('#poketeams').hide();
         $('#pokebarn').hide();
+        $('#battle').hide();
     });
     $('.poketeams').on ('click', function () {
         $('#profile').hide();
         $('#pokedex').hide();
         $('#poketeams').show();
         $('#pokebarn').hide();
+        $('#battle').hide();
     });
     $('.pokebarn').on ('click', function () {
         $('#profile').hide();
         $('#pokedex').hide();
         $('#poketeams').hide();
         $('#pokebarn').show();
+        $('#battle').hide();
+    });
+    $('.battle').on ('click', function () {
+        $('#profile').hide();
+        $('#pokedex').hide();
+        $('#poketeams').hide();
+        $('#pokebarn').hide();
+        $('#battle').show();
     });
 });

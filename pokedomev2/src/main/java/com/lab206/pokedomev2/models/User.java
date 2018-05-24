@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -30,11 +31,18 @@ public class User {
     @NotEmpty(message="The username field cannot be empty")
     private String username;
     
+    
     @Size(min=6, message="The password must be at least 6 characters")
     private String password;
     
     @Transient
     private String passwordConfirmation;
+    
+    private int battlesWon;
+    private int battlesLost;
+    
+    @OneToMany (mappedBy="user", fetch = FetchType.LAZY)
+    private List<Pokemon> team;
     
     @Column(updatable=false)
     private Date createdAt;

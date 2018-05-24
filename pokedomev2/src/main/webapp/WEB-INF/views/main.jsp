@@ -32,6 +32,7 @@
 			<mytags:pokedex/>
 			<mytags:poketeams/>
 			<mytags:pokebarn/>
+			<mytags:battle/>
 		</div>
 	</div>
 </body>
