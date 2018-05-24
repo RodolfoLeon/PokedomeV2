@@ -67,4 +67,10 @@ public class UserControllers {
         
         return "views/main.jsp";
     }
+	
+	@RequestMapping ("/profile")
+	public String profile (Model model) {
+		
+		return "views/profile.jsp";
+	}
 }
