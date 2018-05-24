@@ -45,6 +45,10 @@ public class Team {
     private Date createdAt;
     private Date updatedAt;
     
+    public Team () {
+    	
+    }
+    
 	public Long getId() {
 		return id;
 	}
