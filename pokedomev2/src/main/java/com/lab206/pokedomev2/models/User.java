@@ -42,7 +42,7 @@ public class User {
     private int battlesLost;
     
     @OneToMany (mappedBy="user", fetch = FetchType.LAZY)
-    private List<Pokemon> team;
+    private List<Team> teams;
     
     @Column(updatable=false)
     private Date createdAt;
