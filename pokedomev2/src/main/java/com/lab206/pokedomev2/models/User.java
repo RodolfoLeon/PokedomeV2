@@ -42,7 +42,7 @@ public class User {
     private int battlesLost;
     
     @OneToMany (mappedBy="user", fetch = FetchType.LAZY)
-    private List<Pokemon> team;
+    private List<Team> teams;
     
     @Column(updatable=false)
     private Date createdAt;
@@ -110,5 +110,25 @@ public class User {
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
+	public int getBattlesWon() {
+		return battlesWon;
+	}
+	public void setBattlesWon(int battlesWon) {
+		this.battlesWon = battlesWon;
+	}
+	public int getBattlesLost() {
+		return battlesLost;
+	}
+	public void setBattlesLost(int battlesLost) {
+		this.battlesLost = battlesLost;
+	}
+	public List<Team> getTeams() {
+		return teams;
+	}
+	public void setTeams(List<Team> teams) {
+		this.teams = teams;
+	}
+	
+	
     
 }

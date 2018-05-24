@@ -25,19 +25,31 @@ public class Pokemon {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
- 
+    
 	private String name;
 		
 	private Double pk_height;
 	
-	@ManyToMany (fetch = FetchType.LAZY)
-    @JoinTable(
+	private Double pk_weight;
+	
+	@ManyToMany (fetch = FetchType.LAZY) 		
+	@JoinTable (
     		name = "team_members",
     		joinColumns = @JoinColumn (name = "pokemon_id"),
     		inverseJoinColumns = @JoinColumn (name = "team_id")
-        )
+    )
     private List<Team> teams;
-			
+	
+	
+	@ManyToMany (fetch = FetchType.LAZY) 		
+	@JoinTable (
+    		name = "pokemon_types",
+    		joinColumns = @JoinColumn (name = "pokemon_id"),
+    		inverseJoinColumns = @JoinColumn (name = "poketype_id")
+    )
+    private List<Pokemon> pokemons;
+	
+	
     @Column(updatable=false)
     @DateTimeFormat(pattern = "MM/dd/yyyy HH:mm:ss")
     private Date createdAt;
@@ -91,7 +103,20 @@ public class Pokemon {
     @PreUpdate
     protected void onUpdate(){
         this.updatedAt = new Date();
-    }    
+    }
+	public Double getPk_weight() {
+		return pk_weight;
+	}
+	public void setPk_weight(Double pk_weight) {
+		this.pk_weight = pk_weight;
+	}
+	public List<Pokemon> getPokemons() {
+		return pokemons;
+	}
+	public void setPokemons(List<Pokemon> pokemons) {
+		this.pokemons = pokemons;
+	}    
 	
+    
     
 }
