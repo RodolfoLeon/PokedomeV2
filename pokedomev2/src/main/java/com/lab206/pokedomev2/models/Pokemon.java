@@ -25,8 +25,9 @@ public class Pokemon {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    
+
 	private String name;
+	private String description;
 		
 	private Double pk_height;
 	
@@ -72,6 +73,14 @@ public class Pokemon {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public Double getPk_height() {
 		return pk_height;
 	}

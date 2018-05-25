@@ -15,7 +15,7 @@
 	<title>Pokedex</title>
 </head>
 <body>
-	<div id="wrapper">
+	<div id="wrapper" class="container">
 	<mytags:pokedex/>
 	</div>
 </body>
