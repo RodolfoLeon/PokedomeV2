@@ -30,8 +30,8 @@ public class PokedomeController {
 		return new Pokemon (pokemon);
 	}
 	
-	@RequestMapping ("/pokemon/get/{id}")
-	public User getUserWins ()
+//	@RequestMapping ("/pokemon/get/{id}")
+//	public User getUserWins ()
 	
 	
 //	@RequestMapping ("/fight")
