@@ -26,7 +26,7 @@
 				<h5>${team.name}</h5>
 					<c:forEach items="${team.pokemons}" var="pokemon">
 						<div class="card mb-2 mr-2" style="width: 10rem; height: 14rem">
-							<img class="card-img-top" src="img/sprites/${pokemon.id}.png"
+							<img class="card-img-top" src="/img/sprites/${pokemon.id}.png"
 								alt="Card image cap">
 							<div class="card-body">
 								<h5 class="card-title" style="text-transform: capitalize">${pokemon.name}</h5>

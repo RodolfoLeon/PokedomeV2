@@ -3,11 +3,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <div id="pokedex" class="container row">
 	<div id="left_pane" class="col-sm">
-    <img src="/img/sprites/${currentPokemon.id}.png" alt="pokemon img">
+    <img class src="/img/sprites/${currentPokemon.id}.png" alt="pokemon img">
     <div id="info">
-        <p>Name: ${currentPokemon.name} </p>
+        <p style="text-transform: capitalize">Name: ${currentPokemon.name} </p>
         <p>ID: ${currentPokemon.id}</p>
-        <p>Types: 
+        <p style="text-transform: capitalize">Types: 
         <c:forEach items="${currentPokemon.types}" var="type">
         ${type.name} 
         </c:forEach>
@@ -43,10 +43,10 @@
         </div>
     <a href="#" class="add_to_team button"></a>
 	</div>
-	<div id="pokemon_list" class="container col-sm" style="width: 45%;overflow-y:scroll; height:500px">
+	<div id="pokemon_list" class="container col-sm" style="overflow-y:scroll; height:500px">
 		<c:forEach items="${allPokemons}" var="pokemon">
-	    <p>
-	        <img class='img img-thumbnail' style='width:50px' src='/img/sprites/${pokemon.id}.png' alt="${pokemon.id}">
+	    <p style="text-transform: capitalize">
+	        <img class='img img-thumbnail' style='width:75px' src='/img/sprites/${pokemon.id}.png' alt="${pokemon.id}">
 	        <a href="/pokedex/${pokemon.id}">${pokemon.name}</a>
 	    </p>
 	    </c:forEach>
