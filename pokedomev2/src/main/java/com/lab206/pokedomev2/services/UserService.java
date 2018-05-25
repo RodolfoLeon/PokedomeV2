@@ -1,5 +1,7 @@
 package com.lab206.pokedomev2.services;
 
+import java.util.List;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -41,5 +43,13 @@ public class UserService {
     
     public User findUser(Long id) {
     	return userRepository.findById(id).get();
+    }
+    
+    public int countUsers () {
+    	return (int)userRepository.count();
+    }
+    
+    public List<User> getAllUsers() {
+    	return userRepository.findAll();
     }
 }
