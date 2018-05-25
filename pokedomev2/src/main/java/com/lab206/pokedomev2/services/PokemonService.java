@@ -1,6 +1,7 @@
 package com.lab206.pokedomev2.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ public class PokemonService {
 	}
 	
 	public Pokemon getPokemon(Long id) {
-		return pokeRepo.findById(id).get();
+		Optional<Pokemon> optPoke = pokeRepo.findById(id);
+		return optPoke.get();
 	}
 }
