@@ -1,13 +1,6 @@
 <%@ tag language="java" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div id="profile">
-	<nav class="nav justify-content-end navbar-light bg-light">
-		<a class="nav-link active" href="/pokedex/">Pokedex</a> <a
-			class="nav-link active"
-			href="/trainer/${user.id}/edit">Edit Profile</a> <a
-			class="nav-link" href="#">Battle Dome</a> <a class="nav-link"
-			href="/logout">Log Out</a>
-	</nav>
 	<div id="trainer_data" class="container">
 		<div id="left_panel" class="container text-center col-sm">
 			<h1>Hello, ${user.username}</h1>

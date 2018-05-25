@@ -16,6 +16,9 @@
 <title>Profile</title>
 </head>
 <body>
+	<div id="navigation">
+		<mytags:navbar/>
+	</div>
 	<div id="wrapper">
 		<mytags:trainerProfile />
 	</div>
