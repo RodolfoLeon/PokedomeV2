@@ -9,10 +9,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+    <script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+    <style type="text/css">
+		<%@include file="../css/battle.css" %>
+	</style>
+	<script src="js/battle.js"></script>
 	<title>Battle!</title>
 </head>
 <body>
-	<div id="wrapper">
+	<div id="wrapper" class="container">
 		<mytags:battle/>
 	</div>
 </body>
