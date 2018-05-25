@@ -12,8 +12,8 @@
         ${type.name} 
         </c:forEach>
         </p>
-        <p>Height: ${currentPokemon.pk_height}</p>
-        <p>Weight: ${currentPokemon.pk_weight}</p>
+        <p>Height: ${currentPokemon.pk_height} m</p>
+        <p>Weight: ${currentPokemon.pk_weight} kg</p>
         <p>Description: ${currentPokemon.description}</p>
         
     </div>
@@ -22,18 +22,22 @@
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 			<table>
 			<tr>
-				<td><label for="team_id">Team</label></td>
 				<td>
-				<select name="team_id">
-					<option value=0>Select a Team</option>
-					<c:forEach items="${user.teams}" var="team">
-						<c:if test="${ team.pokemons.size() < 3 }">
-	            		<option value="${team.id}">${team.name}</option>
-	            		</c:if>
-	            	</c:forEach>
-	            </select>
+					<label for="team_id">Team</label>
+				</td>
+				<td>
+					<select name="team_id">
+						<option value=0>Select a Team</option>
+						<c:forEach items="${user.teams}" var="team">
+							<c:if test="${ team.pokemons.size() < 3 }">
+		            		<option value="${team.id}">${team.name}</option>
+		            		</c:if>
+		            	</c:forEach>
+		            </select>
 	            </td>		
-	            <td colspan="2"><input type="submit" value="Add Pokemon to Team"/></td>		
+	            <td>
+	            	<input type="submit" value="Add Pokemon to Team"/>
+	            </td>		
 			</tr>		
 		</table>
 		</form>

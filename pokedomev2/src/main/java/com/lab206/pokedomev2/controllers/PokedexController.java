@@ -25,7 +25,6 @@ public class PokedexController {
 		this.pokeServ = pokeServ;
 		this.userServ = userServ;
 		this.teamServ = teamServ;
-		
 	}
 	
 	@RequestMapping ("/pokedex")
@@ -49,6 +48,7 @@ public class PokedexController {
 			return ("redirect:/pokedex/"+id);
 		} else {
 			teamServ.addPokemon(team_id, id);
+			m.addAttribute("user", userServ.findByUsername(p.getName()));
 			m.addAttribute("allPokemons", pokeServ.allPokemon() );
 			m.addAttribute("currentPokemon", pokeServ.getPokemon(id) );
 			return "views/pokedex.jsp";
