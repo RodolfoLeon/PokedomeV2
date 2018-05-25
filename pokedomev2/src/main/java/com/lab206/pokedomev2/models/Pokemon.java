@@ -47,7 +47,7 @@ public class Pokemon {
     		joinColumns = @JoinColumn (name = "pokemon_id"),
     		inverseJoinColumns = @JoinColumn (name = "poketype_id")
     )
-    private List<Pokemon> pokemons;
+    private List<PokeType> types;
 	
 	
     @Column(updatable=false)
@@ -110,13 +110,14 @@ public class Pokemon {
 	public void setPk_weight(Double pk_weight) {
 		this.pk_weight = pk_weight;
 	}
-	public List<Pokemon> getPokemons() {
-		return pokemons;
+
+	public List<PokeType> getTypes() {
+		return types;
 	}
-	public void setPokemons(List<Pokemon> pokemons) {
-		this.pokemons = pokemons;
-	}    
-	
-    
+
+	public void setTypes(List<PokeType> types) {
+		this.types = types;
+	}
+	 
     
 }
