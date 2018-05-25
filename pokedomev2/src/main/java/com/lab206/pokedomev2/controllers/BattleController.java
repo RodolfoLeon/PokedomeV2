@@ -24,14 +24,19 @@ public class BattleController {
 	public String battle(Model model, Principal principal) {
 		
 		List<User> allUsers = userService.getAllUsers();
+		System.out.println(allUsers);
 		Random random = new Random();
 		User user = userService.findByUsername(principal.getName());		
+
+		System.out.println(user);
+		System.out.println(allUsers.size());
 		User oponent = allUsers.get(random.nextInt(allUsers.size()));
 		
 		while (oponent == user) {
 			oponent = allUsers.get(random.nextInt(allUsers.size()));
 		}
-		
+
+		System.out.println(oponent.getUsername());
 		model.addAttribute("user", user);
 		model.addAttribute("oponent", oponent);
 		
