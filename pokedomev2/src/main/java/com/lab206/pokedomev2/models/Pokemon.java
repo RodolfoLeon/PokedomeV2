@@ -61,6 +61,14 @@ public class Pokemon {
     	
     }
     
+    public Pokemon (Pokemon pokemon) {
+    	this.id = pokemon.getId();
+    	this.name = pokemon.getName();
+    	this.description = pokemon.getDescription();
+    	this.pk_height = pokemon.getPk_height();
+    	this.pk_weight = pokemon.getPk_weight();
+    }
+    
     public Long getId() {
 		return id;
 	}
