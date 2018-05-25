@@ -22,10 +22,6 @@
 </head>
 <body>
 	<div id="wrapper">
-		<form id="logoutForm" method="POST" action="/logout">
-	        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-	        <a href="#" class="logout">Logout</a>
-    	</form>
 		<div id="navigation">
 			<mytags:navbar/>
 		</div>
